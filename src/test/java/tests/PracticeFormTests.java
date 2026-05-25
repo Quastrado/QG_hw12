@@ -1,14 +1,10 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pages.PracticeFormPage;
-import pages.components.ResultModalComponent;
 import tests.testdata.TestDataPracticeForm;
 
 
 public class PracticeFormTests extends TestBase {
-    PracticeFormPage practiceFormPage = new PracticeFormPage();
-    ResultModalComponent resultModalComponent = new ResultModalComponent();
     TestDataPracticeForm testData = new TestDataPracticeForm();
 
    @Test // Заполнение всех полей формы
