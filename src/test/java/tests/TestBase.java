@@ -20,13 +20,6 @@ public class TestBase {
         Configuration.baseUrl = "https://qa-guru.github.io/one-page-form";
         Configuration.browserVersion = "128.0";
         Configuration.browser = "chrome";
-////        Configuration.webDriverManager = false;
         Configuration.remote = Secrets.remoteBrowserUrl;
-
     }
-
-//    @BeforeEach
-//     void prepareTests() {
-//        Selenide.open("/");
-//    }
 }
