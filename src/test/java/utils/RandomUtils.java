@@ -14,7 +14,6 @@ public class RandomUtils {
         System.out.println(getRandomInt(0, 999999));
         System.out.println(getRandomInt(111111111, 888888888));
         System.out.println(getRandomPhone());
-        System.out.println(getRandomGender());
 
     }
 
@@ -56,23 +55,4 @@ public class RandomUtils {
                 , getRandomInt(11, 99), getRandomInt(11, 99));
     }
 
-    public static String getRandomGender() {
-        String[] genders = {"Male", "Female", "Other"};
-
-        return getRandomItemFromStringArray(genders);
-    }
-
-    public static String getRandomMonth() {
-        String[] months = {"January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"};
-
-        return getRandomItemFromStringArray(months);
-    }
-
-    public static String getRandomItemFromStringArray(String[] stringArray) {
-        int arrayLength = stringArray.length;
-        int randomIndex = getRandomInt(0, arrayLength - 1);
-
-        return stringArray[randomIndex];
-    }
 }

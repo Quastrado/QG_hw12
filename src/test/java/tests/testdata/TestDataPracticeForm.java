@@ -1,7 +1,7 @@
 package tests.testdata;
 
 import com.github.javafaker.Faker;
-import utils.RandomUtils;
+
 
 public class TestDataPracticeForm {
     Faker faker = new Faker();
@@ -10,9 +10,13 @@ public class TestDataPracticeForm {
     public String firstName = faker.name().firstName();
     public String secondName = faker.name().lastName();
     public String userEmail = faker.internet().emailAddress();
-    public String genderTextValue = RandomUtils.getRandomGender();
+    public String genderTextValue = faker.options().option(
+            "Male",
+            "Female",
+            "Other"
+    );
     public String userNumber = faker.phoneNumber().subscriberNumber(10);
-    public String dateDay = String.format("%02d", faker.number().numberBetween(1, 28));;
+    public String dateDay = String.format("%02d", faker.number().numberBetween(1, 28));
     public String dateMonth = faker.options().option(
             "January",
             "February",
