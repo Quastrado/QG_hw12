@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import tests.testdata.TestDataTextBox;
@@ -8,7 +9,8 @@ import tests.testdata.TestDataTextBox;
 public class TextBoxTests extends TestBase {
     TestDataTextBox testData = new TestDataTextBox();
 
-    @Test // Успешное заполнение и отправка формы
+    @Test
+    @DisplayName("Успешное заполнение и отправка формы")
     void successfulFormCompletionTest(){
         textBoxPage.openPage()
                 .typeUserName(testData.userName)
@@ -22,7 +24,8 @@ public class TextBoxTests extends TestBase {
                 .checkField("permanentAddress", testData.expectedPermanentAddress);
     }
 
-    @Test // Отправка формы при некорректном значении Email
+    @Test
+    @DisplayName("Отправка формы при некорректном значении Email")
     void incorrectEmail(){
         textBoxPage.openPage()
                 .typeUserEmail(testData.incorrectUserEmail)

@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import tests.testdata.TestDataPracticeForm;
 
@@ -7,7 +8,8 @@ import tests.testdata.TestDataPracticeForm;
 public class PracticeFormTests extends TestBase {
     TestDataPracticeForm testData = new TestDataPracticeForm();
 
-   @Test // Заполнение всех полей формы
+   @Test// Заполнение всех полей формы
+   @DisplayName("Заполнение всех полей формы")
     void successfulFormCompletionTest(){
         practiceFormPage.openPage()
                 .bannerClose()
@@ -40,7 +42,8 @@ public class PracticeFormTests extends TestBase {
 
     }
 
-    @Test  // Заполнение только обязательных полей
+    @Test
+    @DisplayName("Заполнение всех полей формы")
     void requiredFieldsOnlyTest() {
         practiceFormPage.openPage()
                 .bannerClose()
@@ -57,7 +60,8 @@ public class PracticeFormTests extends TestBase {
                 .checkResultModalTitle(testData.successSubmitText);
     }
 
-    @Test  // Отправка пустой формы
+    @Test
+    @DisplayName("Отправка пустой формы")
     void unsuccessfulSubmitTest(){
        practiceFormPage.openPage()
                .bannerClose()
@@ -65,7 +69,8 @@ public class PracticeFormTests extends TestBase {
                .checkFormErrorText(testData.formError);
     }
 
-    @Test  // Отправка формы с некорректным номером телефона
+    @Test
+    @DisplayName("Отправка формы с некорректным номером телефона")
     void incorrectNumberTest() {
        practiceFormPage.openPage()
                .bannerClose()
@@ -77,7 +82,8 @@ public class PracticeFormTests extends TestBase {
                .checkFormErrorText(testData.formError);
    }
 
-    @Test  // Отправка формы с пустым полем First Name
+    @Test
+    @DisplayName("Отправка формы с пустым полем First Name")
     void submitWithoutNameTest() {
         practiceFormPage.openPage()
                 .bannerClose()
