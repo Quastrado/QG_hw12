@@ -18,8 +18,8 @@ public class TestBase {
     static void setupSelenideEnv(){
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://qa-guru.github.io/one-page-form";
-        Configuration.browserVersion = "128.0";
-        Configuration.browser = "chrome";
-        Configuration.remote = Secrets.remoteBrowserUrl;
+//        Configuration.browserVersion = "128.0";
+//        Configuration.browser = "chrome";
+//        Configuration.remote = Secrets.remoteBrowserUrl;
     }
 }
